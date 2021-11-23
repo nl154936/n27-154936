@@ -6,7 +6,7 @@
 * Die Auszeichnungssprache Markdown (Darteiendung.md) mit einfachen Elementen verstehen: 
     * Überschrift der 1. Ordnung (#Überschrift 1)
     * Überschrift der 2. Ordnung (## Überschrift 2 )
-    * Aufzählung (* Aufzählung...)
+    * Aufzählung (* Aufzählung...)  
 
 * Issue für die ERstellung HTML-Seite erstellt
 
