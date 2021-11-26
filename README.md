@@ -1,4 +1,3 @@
 # N27
-
-Entwicklung einer Onlinebank nach dem Vorkibld der N26 Bank.
+Entwicklung einer Banking-App nach dem Vorbild der N26-Bank
 
