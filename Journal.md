@@ -47,3 +47,12 @@
 
 ## 21.12.21
 * Zeilenumbruch <br> einbauen 
+
+
+
+## 14.01.22
+* Ein Lauffähiges Projekt mit einer leeren index.ejs wird ausgeteilt. Es ist keine styles.css vorhanden.
+* Die styles.css muss angelegt und richtig in der index.ejs eingebaut werden.
+* Teil 1: HTML und CSS nach Vorgabe einbauen. dazu müssen die HTML- Konstrukte aus dem Unterricht bekannt sein.
+* Teil 2: Ein unbekanntes Konstrukt muss im Internet gesucht und eingebaut werden. 
+* CSS 
