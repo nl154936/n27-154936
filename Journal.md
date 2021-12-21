@@ -37,3 +37,13 @@
 * ALT-Tag beim Bild verstehen 
 * Hyperlink einbauen mit <a href...<>/a>
 * Target beim Hyperlink verstehen. _blank öffnet im neuen Tab 
+
+## 17.12.2021
+* Tabelle einfügen 
+* Zeilen <tr> und Spalten <td (=Table-Data)> in HTML-Tabellen verstehen 
+* Listen (geordnet <ol> und ungeordnet <ul>) verstehen 
+* In ungeordneten Listen den Aufzählungspunkt durch Bild (Icon) ersetzen 
+* Horizontale Linie <hr> einbauen 
+
+## 21.12.21
+* Zeilenumbruch <br> einbauen 
