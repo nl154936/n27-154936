@@ -16,10 +16,9 @@ app.get('/',(req, res, next) => {
 
 //Wenn die Login-Seite im Browser aufgerufen wird, ....
 
-app.get('/login',(req, res, next) => {    
+app.post('/login',(req, res, next) => {    
     
-    //.... dann wird die Login.ejs vom Server gerendert an den 
-    //Browser zurückgegeben:
+   
 
     res.render('login.ejs', {})          
 })
