@@ -56,3 +56,7 @@
 * Teil 1: HTML und CSS nach Vorgabe einbauen. dazu müssen die HTML- Konstrukte aus dem Unterricht bekannt sein.
 * Teil 2: Ein unbekanntes Konstrukt muss im Internet gesucht und eingebaut werden. 
 * CSS 
+
+
+## 18.01.2022
+* Zweite
