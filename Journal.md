@@ -60,3 +60,10 @@
 
 ## 18.01.2022
 * Zweite
+
+
+
+## 25.01.2022
+* Unterschied zwischen POST und GET verstehen. Get transportiert die Daten vom Browser zum Server über die Adresszeile. POST transportiert die Daten "hinter den Kulissen" 
+* Mit ALT+TAB zwischen Browser und VSC hin- und herspringen 
+* Unterschied zwischen app.get(...) und app.post(...) verstehen. app.get('login') wird ausgeführt, wenn  die Login-Seite angefordert wird. app.post('login') wird ausgeführt, wenn der Button auf der Login-Seite gedrückt wird. 
