@@ -51,6 +51,7 @@ meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {
 
     if(idKunde == kunde.IdKunde){
         serverAntwort.render('index.ejs', {})
+    }else{
     }
     serverAntwort.render('login.ejs', {})
 })
@@ -72,3 +73,8 @@ meineApp.get('/login',(browserAnfrage, serverAntwort, next) => {
 meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {              
     serverAntwort.render('index.ejs', {})          
 })
+
+
+
+
+require('./Uebungen/ifUndElse')
