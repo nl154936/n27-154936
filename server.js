@@ -1,3 +1,31 @@
+class Kunde{
+    constructor(){
+        this.IdKunde
+        this.Nachname
+        this.Vorname
+        this.Kennwort
+        this.Kontostand
+        this.Geburtsdatum
+        this.Mail
+    }
+}
+
+// Von der Kunden-Klasse wird eine konkrte Instanz
+// gebildet. 
+
+let kunde = new Kunde()
+
+// Die konkrete Instanz bekommt Eigenschaftswerte
+// zugewiesen
+
+kunde.IdKunde = 155000
+kunde.Nachname = "Müller"
+kunde.Vorname = "Pit"
+kunde.Geburtsdatum = "23.10.2000"
+kunde.Mail = "mueller@web.de"
+kunde.Kennwort = "123"
+
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const meineApp = express()
@@ -13,6 +41,21 @@ meineApp.get('/',(browserAnfrage, serverAntwort, next) => {
     serverAntwort.render('index.ejs', {})          
 })
 
+meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {              
+    
+    const idKunde = browserAnfrage.body.IdKunde
+    const kennwort = browserAnfrage.body.Kennwort
+    
+    console.log("ID des Kunden: " + idKunde)
+    console.log("Kennwort des Kunden: " + kennwort)
+
+    if(idKunde == kunde.IdKunde){
+        serverAntwort.render('index.ejs', {})
+    }
+    serverAntwort.render('login.ejs', {})
+})
+
+
 // Wenn die login-Seite im Browser aufgerufen wird, ...
 
 meineApp.get('/login',(browserAnfrage, serverAntwort, next) => {              
@@ -23,8 +66,8 @@ meineApp.get('/login',(browserAnfrage, serverAntwort, next) => {
     serverAntwort.render('login.ejs', {})          
 })
 
-
-// Die meineApp.post('login') wird ausgeführt, sobald der Button gedrückt wird.
+// Die meineApp.post('login') wird ausgeführt, sobald der Button
+// auf dem Login-Formular gedrückt wird.
 
 meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {              
     serverAntwort.render('index.ejs', {})          
