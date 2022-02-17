@@ -54,6 +54,7 @@ class Zeugnis{
         this.Geburtsdatum
         this.Gesamtnote
         this.Fehlstunden
+        this.faecher
     }
 }
 
