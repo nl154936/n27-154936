@@ -85,6 +85,42 @@ if(zeugnisMax.Fehlstunden > zuegnisPit.Fehlstunden){
 // c) Instanzieren Sie ein Objekt der Klasse
 // d) Initialisieren Sie das Objekt mit Eigenschaftswerten
 
+// zu a) Die Objekte der realen Welt sind die Produkte 
+
+// zu b) 
+class Produkt{
+    constructor(){
+        this.BruttoPreis
+        this.Bezeichnung
+        this.MwStSatz
+        this.Barcode
+    }
+}
+
+// zu c)
+// Deklaration und Instanziierung 
+let produkt1 = new Produkt()
+
+// zu d) 
+produkt1.Bezeichnung = "Kaugummi"
+produkt1.Barcode = 09012234123457
+produkt1.BruttoPreis = 1.19 // im Quellcode steht anstelle des Kommas ein Punkt 
+produkt1.MwStSatz = 19 // Prozent 
+
+console.log("Das Produkt " + produkt1.Bezeichnung + " hat den  Bruttopreis " + produkt1.Bruttopreis + "€.")
+
+produkt1.Nettopreis = produkt1.BruttoPreis / (100 + produkt1.MwStSatz) * 100  
+
+console.log("Nettopreis: " + produkt1.Nettopreis + " €.")
+
+
+
+
+
+
+
+
+
 
 
 
