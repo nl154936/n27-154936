@@ -113,16 +113,11 @@ produkt1.Nettopreis = produkt1.BruttoPreis / (100 + produkt1.MwStSatz) * 100
 
 console.log("Nettopreis: " + produkt1.Nettopreis + " €.")
 
-
-
-
-
-
-
-
-
-
-
+if(produkt1.BruttoPreis > 1 ){
+    console.log("Achtung Preis von" + produkt1.Bezeichnung )
+}else{
+    console.log(" Preis von" + produkt1.Bezeichnung + "ist o.k.")
+}
 
 
 
@@ -134,6 +129,31 @@ console.log("Nettopreis: " + produkt1.Nettopreis + " €.")
 // d) Initialisieren Sie das Objekt mit Eigenschaftswerten
 
 
+class Stand{
+    constructor(){
+        this.Name
+        this.Lage
+        this.Oefnungszeiten
+        this.Personenzahl 
+    }
+
+}
+
+let standCafeteria = new Stand 
+
+standCafeteria.Name = " Cafeteria"
+standCafeteria.lage = "Turnhalle"
+
+standCafeteria.Oefnungszeiten = "10 uhr bis 18 Uhr"
+standCafeteria.Personenzahl = 3 
+standCafeteria.Ausgaben = 500
+standCafeteria.Einnahmen = 1000
+
+if(standCafeteria.Einnahmen > standCafeteria.Ausgaben){
+    console.log("Der Stand " + standCafeteria.Name + "macht Gewinn. ")
+}else{
+    console.log("Der Stand " + standCafeteria.Name + " macht keinen Gewinn.")
+}
 
 
 
