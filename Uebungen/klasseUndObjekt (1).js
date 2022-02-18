@@ -60,7 +60,7 @@ class Zeugnis{
 
 // zu c) 
 let zuegnisPit = new Zeugnis()
-let zeugnusMax = new Zeugnis()
+let zeugnisMax = new Zeugnis()
 
 // zu d) 
 zuegnisPit.SchuelerName = "Pit Kiff"
@@ -69,7 +69,7 @@ zuegnisPit.Gesamtnote= 1
 
 zeugnisMax.SchuelerName = "Max Muster"
 zeugnisMax.Fehlstunden = 10 
-zeugnusMax.Gesamtnote = 2 
+zeugnisMax.Gesamtnote = 2 
 
 if(zeugnisMax.Fehlstunden > zuegnisPit.Fehlstunden){
     console.log("Max Muster hat mehr Fehlstunden")
