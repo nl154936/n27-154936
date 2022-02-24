@@ -46,7 +46,7 @@ meineApp.get('/',(browserAnfrage, serverAntwort, next) => {
             serverAntwort.render('login.ejs',{
                 meldung : ""
             })
-    })          
+    }         
 })
 
 meineApp.post('/login',(browserAnfrage, serverAntwort, next) => {              
