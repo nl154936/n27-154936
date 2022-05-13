@@ -162,9 +162,3 @@ if(standCafeteria.Einnahmen > standCafeteria.Ausgaben){
 
 
 
-
-
-
-
-
-
