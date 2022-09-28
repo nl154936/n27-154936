@@ -3,6 +3,20 @@
 // wie z.B. Kunde, Konto, Filiale, Bankautomat, ...
 // Alle Kunden unserer Bank haben dieselben Eigenschaften, aber
 // unterschiedliche Eigenschaftswerte.
+class Kredit{
+    constructor(){
+        this.Zinssatz
+        this.Laufzeit
+        this.Betrag 
+    }
+
+// eine Funktion berechnet etwas. Im Namen der Funktion steht also immer ein Verb. 
+
+    berechneGesamtkostenKreditNachEinemJahr(){
+        return this.Betrag * this.Zinssatz / 100 + this.Betrag 
+    }
+}
+
 
 class Kunde{
     constructor(){
@@ -57,27 +71,36 @@ kundenberater.Rufnummer = "+49123/4567890"
 kundenberater.Begruessung = "Hallo, ich bin's, Dein Kundenberater!"
 kundenberater.Position = "Master of desaster"
 
+// Die Klasse Konto ist der Bauplan für alle konto-Objekte 
+// in der Klasse werden alle relevanten Eigenschaften definiert.
+// Eigenschaften, aber unterschiedliche Eigenschaften 
+
 class Konto{
     constructor(){
+
+// Die relevanten Eigenschaften werden in constructor aufgelistet
+// Eigenschaften werden immer groß geschreiben 
+
         this.Kontostand
-        this.IBAN 
+        this.IBAN
         this.Kontoart 
         this.Pin 
     }
 }
 
+// Instanzierung eines Objekts namens konto vom Typ Konto 
+// "let Konto" bedeutet, dass ein Objekt namens komto existieren soll. Man sagt, 
+// das konto wird deklariert 
+
 let konto = new Konto()
 
 //Initialisierung
 
+// Die Zuweisung von Eigenschaften geschieht immer von rechts nach Links 
 
-konto.Iban = 123456789
+konto.IBAN = 123456789
 konto.Kontostand = 1000000
 konto.Kontoart = "Giro"
-
-
-
-
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -300,6 +323,9 @@ require('./Uebungen/ifUndElse.js')
 require('./Uebungen/klasseUndObjekt.js')
 require('./Uebungen/klausur.js')
 
+// Sobald der Button "Kontostand anzeigen"auf der Index Seite gedrückt wird, 
+// wird die meineApp.get('/kontostandAnzeigen' - Funktion abgearbeitet 
+
 meineApp.get('/kontostandAnzeigen',(browserAnfrage, serverAntwort, next) => {              
     
     // Wenn ein signierter Cookie mit Namen 'istAngemeldetAls' im Browser vorhanden ist,
@@ -310,7 +336,35 @@ meineApp.get('/kontostandAnzeigen',(browserAnfrage, serverAntwort, next) => {
         
         // Die Index-Seite wird an den Browser gegeben:
 
-        serverAntwort.render('kontostandAnzeigen.ejs',{})
+        serverAntwort.render('kontostandAnzeigen.ejs',{
+            Kontostand: konto.Kontostand,
+            Kontoart: konto.Kontoart,
+            IBAN: konto.IBAN, 
+            Meldung: konto.Meldung
+
+        })
+    }else{
+
+        // Wenn der Kunde noch nicht eigeloggt ist, soll
+        // die Loginseite an den Browser zurückgegeben werden.
+        serverAntwort.render('login.ejs', {
+            Meldung: ""
+        })
+    }                 
+})
+
+
+meineApp.get('/KreditBerechnen',(browserAnfrage, serverAntwort, next) => {              
+    
+    // Wenn ein signierter Cookie mit Namen 'istAngemeldetAls' im Browser vorhanden ist,
+    // dann ist die Prüfung wahr und die Anweisungen im Rumpf der if-Kontrollstruktur 
+    // werden abgearbeitet.
+
+    if(browserAnfrage.signedCookies['istAngemeldetAls']){
+        
+        // Die Index-Seite wird an den Browser gegeben:
+
+        serverAntwort.render('KreditBerechnen.ejs',{})
     }else{
 
         // Wenn der Kunde noch nicht eigeloggt ist, soll
