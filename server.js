@@ -319,9 +319,9 @@ meineApp.post('/profile',(browserAnfrage, serverAntwort, next) => {
 })
 
 
-require('./Uebungen/ifUndElse.js')
-require('./Uebungen/klasseUndObjekt.js')
-require('./Uebungen/klausur.js')
+//require('./Uebungen/ifUndElse.js')
+//require('./Uebungen/klasseUndObjekt.js')
+require('./Klausuren/20221026_Klausur.js')
 
 // Sobald der Button "Kontostand anzeigen"auf der Index Seite gedrückt wird, 
 // wird die meineApp.get('/kontostandAnzeigen' - Funktion abgearbeitet 
